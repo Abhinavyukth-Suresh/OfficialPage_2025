@@ -103,3 +103,7 @@ html{
     width: 0;  /* Remove scrollbar space */
     background: transparent;  /* Optional: just make scrollbar invisible */
 }
+
+video::-webkit-media-controls {
+  display: none;
+}

@@ -35,7 +35,7 @@
 
 @media (orientation: portrait) {
     #intro{
-        transform: scale(0.7) translateX(-10%);
+        transform: scale(0.4) translateX(-10%);
         width: 100%;
         margin-left: 0px;
         left: 0px;

@@ -1,1022 +1,324 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <title>Abhinav Yukth S</title>
-    <style>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+        <link  href="anim.css" rel="stylesheet">
+        <link  href="base.css" rel="stylesheet">
+        <link  href="intro.css" rel="stylesheet">
+        <link  href="proj.css" rel="stylesheet">
+        <link  href="bubble.css" rel="stylesheet">
+         <script src="funcs.js"></script> 
+
+        <title>Abhinav yukth Suresh</title>
+
+        <style>
         
-
-        .fadeinright_anim {
-            opacity: 0;
-            transform: translateX(250px);
-        }
-
-        .fadeinright_visible {
-            animation: fadeInRight 2s ease-out forwards;
-        }
-
-        @keyframes fadeInRight {
-            0% {
-                opacity: 0;
-                transform: translateX(250px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-
-        .fadeinleft_anim {
-            opacity: 0;
-            transform: translateX(-150px);
-        }
-
-        .fadeinleft_visible {
-            animation: fadeInLeft 2s ease-out forwards;
-        }
-
-        @keyframes fadeInLeft {
-            0% {
-                opacity: 0;
-                transform: translateX(-150px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-
-
-        .fadeintop_anim {
-            opacity: 0;
-            transform: translateX(-150px);
-        }
-
-        .fadeintop_visible {
-            animation: fadeInTop 2s ease-out forwards;
-        }
-
-        @keyframes fadeInTop {
-            0% {
-                opacity: 0;
-                transform: translateY(-150px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        
-
-        .fadeindown_anim {
-            opacity: 0;
-            transform: translateX(150px);
-        }
-
-        .fadeindown_visible {
-            animation: fadeInDown 2s ease-out forwards;
-        }
-
-        @keyframes fadeInDown {
-            0% {
-                opacity: 0;
-                transform: translateY(150px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-    
-        html {
-           scroll-behavior: smooth;
-        }
-
-
-        body {
-            background-color: black;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-        }
-
-
-        @media (min-width: 601px){
-            #IntroDiv {
-                
-                /*-webkit-box-reflect: below 20px linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 100%);*/
-                display: flex;
+            .contact-table{
+                background-color: white;
+                display: block;
                 align-items: center;
-                padding: 40px;
-                flex-direction: row;
-            }
-
-            #IntroDiv img {
-                border-radius: 10px;
-                height: 460px;
-                width: 460px;
-            }
-
-            #text-block {
-                margin-left: 40px;
-                padding-left: 100px;
-                height: auto;
+                justify-content: center;
                 padding-top: 30px;
-            }
+                padding-left: 40px;
+                padding-bottom: 40px;
+                height: fit-content;
 
-            #line{
-                border-left: 5px solid rgb(255, 252, 240);
-                height: 300px;
-                width: 10px;
-                }
-
-            #text-block h1 {
-                color: white;
-                font-family: 'Raleway', sans-serif;
-                margin: 5px 0;
                 
             }
-
-            #RefDiv{
-                display: flex;
-                flex-direction: row;
-                width: auto;
-                position: relative;
-                
-            }
-
-            #RefDiv img{
-                width: 460px; 
-                height: 322px;
-                margin-left: 50px;
-                opacity: 0.2;
-                border-radius: 10px;
-            }
-
-            #intro_text{
-                color: white;
-                font-family: 'Lato', i;
-            }
-
-            #intro_text p{
-                font-size: 30px;
-                width: 60%;
-                margin-left: 10%;
-                margin-bottom: 50px;
-                margin-top:  50px;
-            }
-
-            #gap{
-                height: 120px; 
-                width: 100%;
-            }
-
-            #card_container{
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: center;
-                padding-left: 2em;
-                padding-right: 1em;
-                width: 80vw;
-                flex-wrap: wrap;
-                position: relative;
-                transition: opacity 1s ease, height 1s ease;
-                margin-left: 5em;
-            }
-
-            #card{
-                height: 500px; 
-                width: 300px; 
-                border-radius: 30px; 
-                background-color: white;
-                margin-left: 30px;
-                
-                margin-bottom: 60px;
-                overflow: hidden;
-                display: flex;
-                flex-direction: column;
-                color: white;
-                font-size: x-large;
-                font-family: 'Lato';
-                text-shadow: 1px 1px black;
-                padding-left: 20px;
-                padding-right: 10px;
-                transition: transform 0.3s ease-in-out;
-                box-shadow: 5px 5px 5px rgb(52, 56, 59 );
-            }
-
-            #card:hover{
-                transform: scale(1.05);
-                box-shadow: 13px 13px 15px rgb(52, 56, 59 );
-            }
-
-            #Htitle{
-                color: white;
-                font-family: "Raleway";
-                font-size: 40px;
-                padding-left: 20vw;
-            }
-
-            #main_screen{
-                width: 85vw;
-            }
-
-            #sidebar {
-            
-                /*width: 13vw; */
-                max-width: 12vw;
-                /*height:80vh; */
-                
-                background-color: #121212;
-                position: fixed;
-                right: 0;
-                border-radius: 50px;
-                margin-top: 10vh;
-                margin-bottom: 10vh;
-                margin-right: 1vw;
-                color: #d2d2d2;
-                padding: 20px;
-                padding-bottom: 80px;
-
-                display: flex;
-                flex-direction: column;   /* Arrange items in a column */
-                align-items: center; 
-                
-            }
-
-
-
-            #sidebar a{
+            .contact-table p{
                 font-family: 'Raleway';
-                font-size: 1.5em;
-                margin-top: 2vh;
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                border-radius: 10px;
-                padding: 1vw;
-                width: 100%;
-                transition: opacity 0.3s ease, height 0.3s ease;
-            }
-
-            #sidebar a:hover{
-                background-color: rgb(75, 42, 208);
-            }
-
-            .hide_sidebar{
-                align-self: flex-end;
-                margin-right: 20px;
-                font-size: xx-large;
-                border-radius: 3rem;
-                padding-bottom: 0.5rem;
-            }
-
-            #bubble{ 
-                border-radius: 30px; 
-                background-color: rgb(120, 127, 214); /*rgb(108, 76, 235)*/
-                color: white;
-                font-size: 1.5rem;
-                font-family: 'Raleway';
-                padding-top: 15px;
-                padding-left: 25px;
-                padding-bottom: 15px;
-                padding-right: 25px;
-                transition: transform 0.3s ease-in-out;
-                min-width: 60px;
-                margin-right: 50px;
-                margin-bottom: 50px;
-            }
-
-            #list{
-                display: flex;
-                flex-direction: column;
-                padding-left: 100px;
-                padding-right: 100px;
-                flex-wrap: wrap;
-                align-items: center;
-                justify-content: center;
-            }
-
-            #elem{
-                border-radius: 10px; 
-                background-color: white;
+                font-style:inherit;
                 color: black;
-                font-size: 1.1rem;
-                font-family: 'Raleway';
-                padding-top: 15px;
-                padding-left: 25px;
-                padding-bottom: 15px;
-                padding-right: 25px;
-                transition: transform 0.3s ease-in-out;
-                min-width: 60px;
-                margin-right: 50px;
-                margin-bottom: 15px;
-                justify-content: center;
-            }
-
-            #details{
-                display: none;
-            }
-
-            #master{
-                display: flex;
-                flex-direction: row;
-                position: relative;
-                }
-
-            #det{
-                width: 70vw;
-                height: auto;
-                min-height: 350px;
-                background-color: #141414;
-                display: none;
-                border-radius: 30px;
-                padding-left: 80px;
-                padding-top: 30px;
-                transition: opacity 0.3s ease, height 0.3s ease;
-                font-family:  'Raleway';/*"Courier New";*/
-                margin-left: 5em;
-                padding-bottom: 50px;
-                padding-right: 50px;
-                color:white;
-            }
-
-            #det_2{
-                width: 70vw;
-                height: auto;
-                min-height: 350px;
-                background-color: #141414;
-                display: none;
-                border-radius: 30px;
-                padding-left: 80px;
-                padding-top: 30px;
-                transition: opacity 0.3s ease, height 0.3s ease;
-                font-family:  'Raleway';/*"Courier New";*/
-                margin-left: 5em;
-                padding-bottom: 50px;
-                padding-right: 50px;
-                color:white;
-            }
-
-            #exit{
-                background-color: 	#4f5b66;
-                font-size: xx-large;
-                border-radius: 10px;
-                padding: 5px;
-                padding-top: 2px;
-                cursor: pointer;
-            }
-        }
-
-    @media (max-width: 650px){
-        #main_screen{
-                width: 100vh;
-            }
-
-        #IntroDiv {
-                display: flex;
-                align-items: center;
-                padding: 40px;
-                flex-direction: row;
-            }
-
-            #IntroDiv img {
-                border-radius: 10px;
-                height: 306px;
-                width: 306px;
-            }
-
-            #RefDiv img{
-                width: 306px; 
-                height: 214px;
-                margin-left: 50px;
-                opacity: 0.2;
-                border-radius: 10px;
-            }
-
-            #text-block {
-                margin-left: 40px;
-                padding-left: 30px;
-                height: auto;
-                padding-top: 30px;
-            }
-
-            #line{
-                border-left: 5px solid rgb(255, 252, 240);
-                height: 300px;
-                width: 10px;
-                }
-
-            #text-block h1 {
-                color: white;
-                font-family: 'Raleway', sans-serif;
-                margin: 5px 0;
-                font-size: larger;
-                
-            }
-
-            #RefDiv{
-                display: flex;
-                flex-direction: row;
-                width: auto;
-                position: relative;
-                flex-wrap: wrap;
-                
-            }
-
-            
-
-            #intro_text{
-                color: white;
-                font-family: 'Lato', i;
-                font-size: large;
-            }
-
-            #intro_text p{
                 font-size: x-large;
-                margin-left: 10%;
-                margin-bottom: 50px;
-                margin-top:  50px;
-            }
-
-            #gap{
-                height: 120px; 
-                width: 100vw;
-            }
-
-            #card_container{
-                width: 100vw;
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: center;
-                padding-left: 2em;
-                padding-right: 1em;
-                flex-wrap: wrap;
-                position: relative;
-                transition: opacity 1s ease, height 1s ease;
-                margin-left: 5em;
-            }
-
-            #card{
-                height: 500px; 
-                width: 300px; 
-                border-radius: 30px; 
-                background-color: white;
-                margin-left: 30px;
-                
-                margin-bottom: 60px;
-                overflow: hidden;
-                display: flex;
-                flex-direction: column;
-                color: white;
-                font-size: x-large;
-                font-family: 'Lato';
-                text-shadow: 1px 1px black;
-                padding-left: 20px;
-                padding-right: 10px;
-                transition: transform 0.3s ease-in-out;
-                box-shadow: 5px 5px 5px rgb(52, 56, 59 );
-            }
-
-            #card:hover{
-                transform: scale(1.05);
-                box-shadow: 13px 13px 15px rgb(52, 56, 59 );
-            }
-
-            #Htitle{
-                color: white;
-                font-family: "Raleway";
-                font-size: 40px;
-                padding-left: 20vw;
+                margin: 10px;
+                font-weight: 500;
             }
 
             
-
-            #sidebar {
-                display: none;
-                max-width: 0vw;
-                
-                background-color: #121212;
-                position: fixed;
-                right: 0;
-                border-radius: 50px;
-                margin-top: 0vh;
-                margin-bottom: 0vh;
-                margin-right: 0vw;
-                color: #d2d2d2;
-                padding: 0px;
-                padding-bottom: 0px;
-                flex-direction: column;   /* Arrange items in a column */
-                align-items: center; 
-                
-            }
-
-
-
-            #sidebar a{
-                font-family: 'Raleway';
-                font-size: 1.5em;
-                margin-top: 0vh;
-                display: none;
-                flex-direction: row;
-                align-items: center;
-                border-radius: 10px;
-                padding: 0vh;
-                transition: opacity 0.3s ease, height 0.3s ease;
-            }
-
-            #sidebar a:hover{
-                background-color: rgb(75, 42, 208);
-            }
-
-            .hide_sidebar{
-                align-self: flex-end;
-                margin-right: 0px;
-                font-size: xx-large;
-                border-radius: 3rem;
-                padding-bottom: 0rem;
-            }
-
-            #bubble{ 
-                border-radius: 30px; 
-                background-color: rgb(120, 127, 214); /*rgb(108, 76, 235)*/
-                color: white;
-                font-size: 1.5rem;
-                font-family: 'Raleway';
-                padding-top: 15px;
-                padding-left: 25px;
-                padding-bottom: 15px;
-                padding-right: 25px;
-                transition: transform 0.3s ease-in-out;
-                min-width: 60px;
-                margin-right: 50px;
-                margin-bottom: 50px;
-            }
-
-            #list{
-                display: flex;
-                flex-direction: column;
-                padding-left: 10px;
-                padding-right: 10px;
-                flex-wrap: wrap;
-                align-items: center;
-                justify-content: center;
-            }
-
-            #elem{
-                border-radius: 10px; 
-                background-color: white;
-                color: black;
-                font-size: 1.1rem;
-                font-family: 'Raleway';
-                padding-top: 15px;
-                padding-left: 25px;
-                padding-bottom: 15px;
-                padding-right: 25px;
-                transition: transform 0.3s ease-in-out;
-                min-width: 60px;
-                margin-right: 50px;
-                margin-bottom: 15px;
-                justify-content: center;
-            }
-
-            #details{
-                display: none;
-            }
-
-            #master{
-                width: 100vw;
-                display: flex;
-                flex-direction: row;
-                position: relative;
-                }
-
-            #det{
-                width: 100vw;
-                height: auto;
-                min-height: 350px;
-                background-color: #141414;
-                display: none;
-                border-radius: 30px;
-                padding-left: 50px;
-                padding-top: 30px;
-                transition: opacity 0.3s ease, height 0.3s ease;
-                font-family:  'Raleway';
-                margin-left: 5em;
-                padding-bottom: 50px;
-                padding-right: 50px;
-                color:white;
-            }
-
-            #det_2{
-                width: 100vw;
-                height: auto;
-                min-height: 350px;
-                background-color: #141414;
-                display: none;
-                border-radius: 30px;
-                padding-left: 80px;
-                padding-top: 30px;
-                transition: opacity 0.3s ease, height 0.3s ease;
-                font-family:  'Raleway';/*"Courier New";*/
-                margin-left: 5em;
-                padding-bottom: 50px;
-                padding-right: 50px;
-                color:white;
-            }
-
-            #exit{
-                background-color: 	#4f5b66;
-                font-size: xx-large;
-                border-radius: 10px;
-                padding: 5px;
-                padding-top: 2px;
-                cursor: pointer;
-            }
-        }
-
-
-    </style>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-        const animationMap = [
-            { selector: ".fadeinright_anim", className: "fadeinright_visible" },
-            { selector: ".fadeintop_anim", className: "fadeintop_visible" },
-            { selector: ".fadeindown_anim", className: "fadeindown_visible" },
-            { selector: ".fadeinleft_anim", className: "fadeinleft_visible" },
-        ];
-
-        animationMap.forEach(({ selector, className }) => {
-            const elements = document.querySelectorAll(selector);
-            const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                entry.target.classList.add(className);
-                } else {
-                entry.target.classList.remove(className); // <-- Reset when out of view
-                }
-            });
-            }, { threshold: 0.1 });
-
-            elements.forEach(el => observer.observe(el));
-        });
-        });
-
-
-        function moveSidebar() {
-            var sidebar = document.getElementById("sidebar");
-            if (sidebar.style.transform === "translateX(100px)") {
-                sidebar.style.transform = "translateX(0)"; // Move sidebar back to original position
-            } else {
-                sidebar.style.transform = "translateX(100px)"; // Move sidebar 100px to the right
-            }
-        }
-
-        function scrollToSection(className) {
-            const section = document.querySelector(className);
-            if (section) {
-                section.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
-
-        var CARD;
-
-        function details_(className) {
-            var parent = className.parentElement;
-            var details = className.querySelector('#details');
-            var det = document.getElementById("det");
-            parent.style.display = "none";
-            det.style.display = "block";
-            det.innerHTML = details.innerHTML;
-            CARD = parent;
-            scrollToSection('.proj');
-        }
-
-        function rem_details(className){     
-            parent = className.parentElement;
-            parent.style.display = "none";
-            CARD.style.display = "flex";
-
-        }
-
-        var CARD2;
-        function details_2(className) {
-            var parent = className.parentElement;
-            var details = className.querySelector('#details');
-            var det = document.getElementById("det_2");
-            parent.style.display = "none";
-            det.style.display = "block";
-            det.innerHTML = details.innerHTML;
-            CARD2 = parent;
-            scrollToSection('.hobby');
-        }
-
-        function rem_details_2(className){     
-            parent = className.parentElement;
-            parent.style.display = "none";
-            CARD2.style.display = "flex";
-        }
-
-        var VIS_SB = true;
-
-        function sidebar_f(Button){
-            var bar = document.getElementById("sidebar");
-            var children = bar.querySelectorAll('a');
-            
-            if(VIS_SB){
-                for(let i=0; i<children.length;i++){
-                    children[i].style.display = "none";
-                }
-                VIS_SB = false;
-                Button.innerHTML = "←";
-                bar.style.padding = "5px";
-            }
-            
-
-            else{
-                VIS_SB = true;
-                for(let i=0; i<children.length;i++){
-                    children[i].style.display = "flex";
-                }
-                Button.innerHTML = "→";
-                bar.style.padding = "20px";
-                bar.style.paddingBottom = "80px";
-            }
-
-        }
-
-    </script>
-
-</head>
-
-<body>
-    
-    
-
-    <div id="main_screen" class="intro">
-        <div style="height: 100px;"></div>
-
-        <div id="IntroDiv">
-            <img src="profile1.jpeg" alt="Profile Photo" />
-
-            <div class="fadeintop_anim" id="line">
-            </div>
-            <div id="text-block" >
-                <h1 class="fadeinright_anim" style="font-size: 3em;">ABHINAV YUKTH S</h1>
-                <h1 class="fadeinright_anim">RESEARCHER</h1>
-                <h1 class="fadeinright_anim">PHYSICS | DATA-SCIENCE</h1>
-                <div style="height: 20px;"></div>
-                <h1 class="fadeinright_anim">Indian Institute of Science Education and Research  Thiruvananthpuram</h1>
-            </div>
-        </div>
-
-        <div id="RefDiv">
-            <img id="refimg" src="ref_profile.png" alt="Profile Photo" />
-            <div id="intro_text" class="fadeindown_anim">
-                <p> <i> I am a BS-MS student from </i><b> IISER Thiruvananthpuram, </b><i> currently pursuing my research in </i><b> Theoretical Condensed Matter and Statistical Physics.</b><i> I am profoundly drawn to the depths of data science, machine learning, and statistics.</i></p>
-            </div> 
-        </div>
-
-        <div id="gap">
-            <h1 id="Htitle" class="fadeinleft_anim proj">PROJECTS</h1>
-        </div>
-
-        <div id="master">
-
-            <div id="det">
-            </div>
-
-            <div id="card_container" class="fadeindown_anim">
-                <div id="card" onclick="details_(this)" style="border: 3px solid red; ">
-                    <img style="transform: scale(1.7) translateX(50px);" src="output2.gif.gif" />
-                    <h2 style="transform: translateY(-200px);">Numerical Simlation of Gamma-Ray Burst in WR Stars</h2>
-                    <div id="details" hidden>
-                        <buttom id="exit" onclick="rem_details(this)">🗙</buttom>
-                        <h1 style="font-size: 3rem;"> Numerical Simlation of Gamma-Ray Burst in Wolf-Rayet Progenitor Stars </h1>
-                        <h2> Long gamma-ray bursts (GRBs) are widely believed to originate from the rapid
-                            core collapse of massive Wolf–Rayet stars, culminating in the formation of a black
-                            hole. In this study, we conducted two-dimensional relativistic hydrodynamic (RHD)
-                            simulations of a long GRB jet using the PLUTO 4.0 code to investigate the conditions,
-                            like spin of the black hole, under which relativistic jets successfully break out of
-                            the stellar envelope of Wolf–Rayet progenitor stars. Further we determined the
-                            Jet Breakout time for different black hole spins and compare the results with the
-                            existing numerical model. For the simulations presented herein, the stellar envelope is
-                            modeled as static, non-rotating, and non-magnetized, with prescribed radial density
-                            profiles. A relativistically hot cylindrical jet is injected through a nozzle oriented
-                            along the z-axis at a specified height zbase, characterized by an initial bulk Lorentz
-                            factor. The jet is further defined by its luminosity (Lj ), specific enthalpy (hj ), and
-                            opening angle (θj ). An accretion-powered jet launching mechanism is incorporated
-                            into the star–jet system.</h2>
-                            <img src="output3.gif" style="width: 20vw;" />
-                            <img src="output1.gif" style="width: 20vw;" />
-                            <img src="output2.gif" style="width: 20vw;" />
-                    </div>
-                </div>
-
-                <div id="card">
-                    <img style="transform: scale(2.0) translateY(60px);" src="note.png"/>
-                    <h2 style="transform: translateY(-200px);"> Variational Monte Carlo Method on Hubbard Model</h2>
-                </div>
-
-                <div id="card" onclick="details_(this)">
-                    <img style="transform: scale(1.7) translateY(50px);" src="atoms.webp"/>
-                    
-                    <h2 style="transform: translateY(-400px);" >Structural Optimization of Carbon Cluster using Swarm Intelligence</h2>
-
-                    <div id="details">
-                        <buttom id="exit" onclick="rem_details(this)">🗙</buttom>
-                        <h1 style="font-size: 3rem;"> Structural Optimization of Carbon Cluster using Swarm Intelligence </h1>
-                        <h2>We employed Particle Swarm Optimization (PSO) to refine the structural configuration of carbon clusters, aiming to identify the most energetically favorable arrangement. 
-                            To evaluate the potential energy of the system, we utilized the Tresoff-Brenner potential, which offers a comprehensive description of interatomic interactions in carbon-based systems. 
-                            The primary objective of the structural optimization process was to determine the lowest energy configuration, thereby ensuring that the carbon cluster adopts the most stable arrangement. 
-                            This optimization technique is essential for understanding the fundamental properties of carbon materials at the atomic level and provides insight into their potential applications in various fields.
-                        </h2>
-
- 
-                    </div>
-                </div>
-
-                <div id="card"  onclick="details_(this)">
-                    <img style="transform: scale(2.0) translateY(50px);" src="MolDyn.png"/>
-                    <h2 style="transform: translateY(-200px);" >Molecular Dynamic Simulations</h2>
-                    <div id="details">
-                        <buttom id="exit" onclick="rem_details(this)">🗙</buttom>
-                        <h1 style="font-size: 3rem;"> Molecular Dynamic Simulations </h1>
-                        <h2>Through this project, I gained hands-on experience with Molecular Dynamics (MD) simulations, focusing on the NVE (Microcanonical) and NVT (Canonical) ensembles.
-                              C programming was used to implement and optimize the simulations, ensuring efficiency in running complex calculations over extended periods. 
-                             One critical aspect was constructing a hybrid Lennard-Jones-Yukawa (LJ-Yukawa) potential, which integrates the advantages of both the Lennard-Jones and Yukawa potentials to accurately model interactions in diverse systems. 
-                             Through parameter estimation, the necessary coefficients for the hybrid potential was determined, ensuring precise interaction representation.
-                              Given the computational complexity, it was essential to optimize the code for performance, enabling the simulations to handle large datasets and produce results in a reasonable timeframe. 
-                              Subsequently, NVT simulations to investigate the system's physical properties was conducted, focusing on phase transitions. 
-                              This analysis provided essential insights into the thermodynamic behavior of the system, enhancing the understanding of molecular-level processes and material properties.
-                        </h2>
-                        <img src="MolDyn.png" style="width: 40vw;"/>
-                    </div>
-
-
-                </div>
-
-                <div id="card" onclick="details_(this)">
-                    <img style="transform: scale(2.0)"  src="Glassy2.png" />
-                    <h2 style="transform: translateY(-250px);" > Glassy systems and Disordered systems under shear</h2>
-                    <div id="details">
-                        <buttom id="exit" onclick="rem_details(this)">🗙</buttom>
-                        <h1 style="font-size: 3rem;"> Glassy systems and Disordered systems under shear </h1>
-                        <h2>This project focuses on the analysis of superfluid dynamics, specifically exploring caged dynamics and cluster behavior in various colloidal systems.
-                        We performed Topological Cluster Classification (TCC) analysis to examine the structural evolution and identify the proportion of different clusters within the system. 
-                        By conducting simulations at varying temperatures, we investigated how the proportion of these clusters changed, providing insight into the temperature-dependent behavior and transitions in the system.
-                        Furthermore, we analyzed the stability of the clusters, assessing how they persist or disassemble under different thermodynamic conditions. We studied at different temperature how the proportion changes, stability of clusters, and their dynamics.
-                        This detailed investigation helped to uncover the complex interactions and behaviors governing superfluid systems at the microscopic level, offering valuable insights into the stability and dynamics of clusters 
-                        in superfluid colloids.
-                        </h2>
-                        <img src="glass.gif" style="width: 40vw;" />
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <div id="gap">
-            <h1 id="Htitle" class="fadeinright_anim skills">TECHNICAL SKILLS</h1>
-        </div>
-        <div id="card_container" class="fadeindown_anim">
-            <div id="bubble">
-                C
-            </div>
-
-            <div id="bubble">
-                x86/x86_64 asm
-            </div>
-
-            <div id="bubble">
-                C++
-            </div>
-
-            <div id="bubble">
-                Python 3
-            </div>
-
-            <div id="bubble">
-                Lammps
-            </div>
-
-            <div id="bubble">
-                Ovito
-            </div>
-
-            <div id="bubble">
-                Web Dev
-            </div>
-
-            <div id="bubble">
-                Tableau
-            </div>
-
-            <div id="bubble">
-                TensorFlow 2.0
-            </div>
-
-        </div>
-
-
-        <div style="margin-top: 150px; margin-bottom: 50px;" id="gap">
-            <h1 id="Htitle" class="fadeinleft_anim hobby">HOBBIES AND SIDE PROJECTS</h1>
-        </div>
-
-
-
-
-
-
-
-
-        <div id="master">
-
-            <div id="det_2">
-            </div>
-
-            <div id="card_container" class="fadeindown_anim">
-                <div id="card" onclick="window.location.href = 'https://abhinavyukth-suresh.github.io/pyXLR8Web/';"  style="border: 2px solid green"> 
-                    <img style="transform: scale(2.5) translateY(60px) translateX(60px);" src="code.png" />
-                    <h2 style="transform: translateY(-100px);">pyXlR8</h2>
-                </div>
-
-                <div id="card">
-                    <img style="transform: scale(2.9) translateY(60px);" src="brenner.png" />
-                    <h2 style="transform: translateY(-200px);">Optimized Tersoff-Brenner Potential Implementation</h2>
-                </div>
-
-                <div id="card"  onclick="details_2(this)">
-                    <img style="transform: scale(2.1) translateY(60px);" src="node.png" />
-                    <h2 style="transform: translateY(-200px);font-size: 2em">Node Network</h2>
-                    
-                    <div id="details">
-                        <buttom id="exit" onclick="rem_details_2(this)">🗙</buttom>
-                        <h1 style="font-size: 3rem;"> Node Network </h1>
-                        <h2>
-                            A simplified, less user-intensive SSH-like local network communication protocol is designed to facilitate seamless interaction between systems. This protocol is capable of automatically constructing 
-                            hierarchical network architectures, enabling efficient management of server-client communication and data transfer. By automating the network structure, it enhances the scalability and robustness of 
-                            communication, ensuring effective handling of increased server-client interactions and data throughput. 
-                            This approach minimizes manual configuration, streamlining the setup process, while ensuring reliable and efficient data exchange across interconnected systems within a local network.
-                        </h2>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-
-        <div style="margin-top: 150px; margin-bottom: 50px;" id="gap">
-            <h1 id="Htitle" class="fadeinleft_anim contact">CONTACTS</h1>
-        </div>
-        
-        <div id="list" style="background-color: white; width:100vw;">
-            <div id="elem">
-            <p>phone: +91 8089410513</p>
-            </div>
-
-            <div id="elem">
-            <p>Email: abhinavyukths21@iisertvm.ac.in</p>
-            </div>
-
-            <div id="elem">
-            <p>Email: abhinavyukths@gmail.com</p>
-            </div>
-
-            <div id="elem">
-            <p>Github:  www.linkedin.com/in/abhinavyukth-suresh </p>
-            </div>
-
-            <div id="elem">
-            <p>LinkedIn:  www.github.com/Abhinavyukth-Suresh   </p>
-            </div>
-        </div>
-
-        
-
-        <div style="margin-top: 100px;" id="gap">
-        </div>
-
+        </style>
+    </head>
+    <body>
+
+    <div class="topbar">
+        <h1> AYS </h1>
+        <button id="toggleSidebarBtn">Navigation Menu</button>
     </div>
-
-    <div id="sidebar" class="fadeinright_anim">
-        <button class="hide_sidebar" onclick="sidebar_f(this)">→</button>
+    <div class="sidebar" id="sidebar">
+        <h2>  . </h2>
         <a onclick="scrollToSection('.intro')">Introduction</a>
         <a onclick="scrollToSection('.proj')">Projects</a>
-        <a onclick="scrollToSection('.skills')">Technical Skills</a>
+        <a onclick="scrollToSection('.skills')">Technical skills</a>
         <a onclick="scrollToSection('.hobby')">Hobbies and Side Projects</a>
         <a onclick="scrollToSection('.contact')">Contacts</a>
     </div>
+
+ 
+    <div class="main-content">
+        <div class="content">
+
+            <!--  SECTION 1 - THE INTRO -->
+            <div class="section intro">
+                <!--            INTRO-SECTION
+                        "image prof" | "intro text1"
+                        "image ref"  | "intro text2"
+                -->
+                <div id="intro">
+                    <!--  VERTICAL SPLIT 1 -->
+                    <div class="hsplit1">
+                        <!--  HORIZONTAL SPLIT 1 -->
+                        <img src="static\assets\profile1.jpeg" alt="Profile Photo" />
+                        <!--  HORIZONTAL SPLIT 2 -->
+                        <div style="border-left: white solid 5px; height: 300px; width: 8px;" class="fadeintop_anim"></div>
+                        <div id="intro_text_box" >
+                            <h1 class="fadeinright_anim" style="font-size: 3em;">ABHINAV YUKTH S</h1>
+                            <h1 class="fadeinright_anim">RESEARCHER</h1>
+                            <h1 class="fadeinright_anim">PHYSICS | DATA-SCIENCE</h1>
+                            <h1 style="height: 40px;">   </h1>
+                            <h1 class="fadeinright_anim">Indian Institute of Science Education and Research  Thiruvananthpuram</h1>
+                        </div>
+                    </div>
+
+                    <!--  VERTICAL SPLIT 2 -->
+                    <div class="hsplit1">
+                        <img id="refimg" src="static\assets\ref_profile.png" alt="Profile Photo" />
+                        <p id="intro2" class="fadeindown_anim"> <i> I am a BS-MS student from </i><b> IISER Thiruvananthpuram, </b><i> currently pursuing my research in </i><b> Theoretical Condensed Matter and Statistical Physics.</b><i> I am profoundly drawn to the depths of data science, machine learning, and statistics.</i></p>
+                    </div>    
+                </div>
+            </div>
+
+
+            <!--  SECTION 2 - PROJECTS -->
+            <div class="section proj">
+                <h1 class="Title fadeinleft_anim">PROJECTS</h1>
+                    <!--
+                    CONTAINS DETAIL CARD AND NAME CARDS
+                    | details | page->| |c1| |c2| |c3| |<-page
+                    -->
+                <div class="card_container">
+                    <div class="detail_card" id="detail_card">  </div>
+
+                    <div class="name_card_cont">
+
+                        <!--    PROJ 1      -->
+                        <div class="card fadeindown_anim" onclick="details_proj(this)">
+                            <img src="static\assets\output2C.gif"  alt="sample" />
+                            <div class="overlay-text">Numerical Simlation of Gamma-Ray Burst in WR Stars</div>
+                            <div class="details">
+                                <buttom id="exit_btn" onclick="rem_proj_details(this)">🗙</buttom>
+                                <h1 style="font-size: 3rem; margin-top: 20px;margin-bottom: 20px;"> Numerical Simlation of Gamma-Ray Burst in Wolf-Rayet Progenitor Stars </h1>
+                                <h2 style="margin-bottom: 40px;"> Long gamma-ray bursts (GRBs) are widely believed to originate from the rapid
+                                    core collapse of massive Wolf–Rayet stars, culminating in the formation of a black
+                                    hole. In this study, we conducted two-dimensional relativistic hydrodynamic (RHD)
+                                    simulations of a long GRB jet using the PLUTO 4.0 code to investigate the conditions,
+                                    like spin of the black hole, under which relativistic jets successfully break out of
+                                    the stellar envelope of Wolf–Rayet progenitor stars. Further we determined the
+                                    Jet Breakout time for different black hole spins and compare the results with the
+                                    existing numerical model. For the simulations presented herein, the stellar envelope is
+                                    modeled as static, non-rotating, and non-magnetized, with prescribed radial density
+                                    profiles. A relativistically hot cylindrical jet is injected through a nozzle oriented
+                                    along the z-axis at a specified height zbase, characterized by an initial bulk Lorentz
+                                    factor. The jet is further defined by its luminosity (Lj ), specific enthalpy (hj ), and
+                                    opening angle (θj ). An accretion-powered jet launching mechanism is incorporated
+                                    into the star–jet system.</h2>
+                                    <img src="c:\Users\User\Desktop\PROG\python\Perosonal_page\static\assets\output3.gif" style="width: 20vw;" />
+                                    <img src="c:\Users\User\Desktop\PROG\python\Perosonal_page\static\assets\output1.gif" style="width: 20vw;" />
+                                    <img src="c:\Users\User\Desktop\PROG\python\Perosonal_page\static\assets\output2.gif" style="width: 20vw;" />
+                                    <div style="height: 30px; width: 100%;"></div>
+                            </div>
+                        </div>
+
+                        <!--    PROJ 2      -->
+                        <div class="card fadeindown_anim" onclick="details_proj(this)">
+                            <img  src="static\assets\note.png"  alt="sample" />
+                            <div class="overlay-text">Variational Monte Carlo Method on Hubbard Model</div>
+                            <div class="details">
+                                <buttom id="exit_btn" onclick="rem_proj_details(this)">🗙</buttom>
+                                <h1 style="font-size: 3rem; margin-top: 20px;margin-bottom: 20px;">Variational Monte Carlo Method on Hubbard Model </h1>
+                                <h2 style="margin-bottom: 40px;">
+                                </h2>
+                            </div>
+                            
+                        </div>
+
+                        <div class="card fadeindown_anim" onclick="details_proj(this)">
+                            <img  src="static\assets\atoms.webp"  alt="sample" />
+                            <div class="overlay-text">Structural Optimization of Carbon Cluster using Swarm Intelligence</div>
+                            <div class="details">
+                                <buttom id="exit_btn" onclick="rem_proj_details(this)">🗙</buttom>
+                                <h1 style="font-size: 3rem; margin-top: 20px;margin-bottom: 20px;"> Structural Optimization of Carbon Cluster using Swarm Intelligence </h1>
+                                <h2 style="margin-bottom: 40px;">We employed Particle Swarm Optimization (PSO) to refine the structural configuration of carbon clusters, aiming to identify the most energetically favorable arrangement. 
+                                    To evaluate the potential energy of the system, we utilized the Tresoff-Brenner potential, which offers a comprehensive description of interatomic interactions in carbon-based systems. 
+                                    The primary objective of the structural optimization process was to determine the lowest energy configuration, thereby ensuring that the carbon cluster adopts the most stable arrangement. 
+                                    This optimization technique is essential for understanding the fundamental properties of carbon materials at the atomic level and provides insight into their potential applications in various fields.
+                                </h2>
+                            </div>
+                        </div>
+
+
+                        <div class="card fadeindown_anim" style="border: white solid 3px;" onclick="details_proj(this)">
+                            <img src="static\assets\MolDyn.png"  alt="sample" />
+                            <div class="overlay-text">Molecular Dynamic Simulations</div>
+                            <div class="details">
+                                <buttom id="exit_btn" onclick="rem_proj_details(this)">🗙</buttom>
+                                <h1 style="font-size: 3rem; margin-top: 20px;margin-bottom: 20px;"> Molecular Dynamic Simulations </h1>
+                                <h2 style="margin-bottom: 40px;">Through this project, I gained hands-on experience with Molecular Dynamics (MD) simulations, focusing on the NVE (Microcanonical) and NVT (Canonical) ensembles.
+                                    C programming was used to implement and optimize the simulations, ensuring efficiency in running complex calculations over extended periods. 
+                                    One critical aspect was constructing a hybrid Lennard-Jones-Yukawa (LJ-Yukawa) potential, which integrates the advantages of both the Lennard-Jones and Yukawa potentials to accurately model interactions in diverse systems. 
+                                    Through parameter estimation, the necessary coefficients for the hybrid potential was determined, ensuring precise interaction representation.
+                                    Given the computational complexity, it was essential to optimize the code for performance, enabling the simulations to handle large datasets and produce results in a reasonable timeframe. 
+                                    Subsequently, NVT simulations to investigate the system's physical properties was conducted, focusing on phase transitions. 
+                                    This analysis provided essential insights into the thermodynamic behavior of the system, enhancing the understanding of molecular-level processes and material properties.
+                                </h2>
+                                <img src="c:\Users\User\Desktop\PROG\python\Perosonal_page\static\assets\MolDyn.png" style="width: 40vw;"/>
+                                <div style="height: 30px; width: 100%;"></div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="card fadeindown_anim" style="border: white solid 3px;" onclick="details_proj(this)">
+                            <img src="static\assets\Glassy2.png"  alt="sample" />
+                            <div class="overlay-text">Dynamics of Glassy and Disordered systems under shear</div>
+                            <div class="details">
+                                <buttom id="exit_btn" onclick="rem_proj_details(this)">🗙</buttom>
+                                <h1 style="font-size: 3rem; margin-top: 20px;margin-bottom: 20px;">Dynamics of Glassy and Disordered systems under shear</h1>
+                                <h2 style="margin-bottom: 40px;">This project focuses on the analysis of superfluid dynamics, specifically exploring caged dynamics and cluster behavior in various colloidal systems.
+                                    We performed Topological Cluster Classification (TCC) analysis to examine the structural evolution and identify the proportion of different clusters within the system. 
+                                    By conducting simulations at varying temperatures, we investigated how the proportion of these clusters changed, providing insight into the temperature-dependent behavior and transitions in the system.
+                                    Furthermore, we analyzed the stability of the clusters, assessing how they persist or disassemble under different thermodynamic conditions. We studied at different temperature how the proportion changes, stability of clusters, and their dynamics.
+                                    This detailed investigation helped to uncover the complex interactions and behaviors governing superfluid systems at the microscopic level, offering valuable insights into the stability and dynamics of clusters 
+                                    in superfluid colloids.
+                                </h2>
+                                <img src="c:\Users\User\Desktop\PROG\python\Perosonal_page\static\assets\glass.gif" style="width: 40vw;" />
+                                <div style="height: 30px; width: 100%;"></div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!--  SECTION 2 - PROJECTS -->
+            <div class="section skills">
+                <h1 class="Title fadeinright_anim" style="margin-bottom: 50px;">TECHNICAL SKILLS</h1>
+                <div class="bubble_container">
+                     <div class="bubble fadeindown_anim">C</div>
+                    <div class="bubble fadeindown_anim">x86/x86_64 asm</div>
+                    <div class="bubble fadeindown_anim">C++</div>
+                    <div class="bubble fadeindown_anim">Python 3</div>
+                    <div class="bubble fadeindown_anim">Lammps</div>
+                    <div class="bubble fadeindown_anim"> Ovito </div>
+                    <div class="bubble fadeindown_anim">Web Dev</div>
+                    <div class="bubble fadeindown_anim">Tableau</div>
+                    <div class="bubble fadeindown_anim">TensorFlow 2.0</div>
+                    <div style="height: 100px; width: 100%;"></div>
+                </div>
+            </div>
+
+            <div class="section hobby">
+                <h1 class="Title fadeinleft_anim" style="margin-top: 0px;">HOBBIES AND SIDE PROJECTS</h1>
+                <div class="card_container">
+                    <div class="detail_card" id="detail_card">  </div>
+
+                    <div class="name_card_cont">
+
+
+                        <div class="card fadeindown_anim" onclick="details_hobby(this)">
+                            <img  src="static\assets\node.png" alt="sample" />
+                            <div class="overlay-text" style="font-weight: 600;">Node Network</div>
+                            <div class="details">
+                                <buttom id="exit_btn" onclick="rem_proj_details(this)">🗙</buttom>
+                                <h1 style="font-size: 3rem; margin-top: 20px;margin-bottom: 20px;"> Node Network </h1>
+                                <h2 style="margin-bottom: 40px;">
+                                    A simplified, less user-intensive SSH-like local network communication protocol is designed to facilitate seamless interaction between systems. This protocol is capable of automatically constructing 
+                                    hierarchical network architectures, enabling efficient management of server-client communication and data transfer. By automating the network structure, it enhances the scalability and robustness of 
+                                    communication, ensuring effective handling of increased server-client interactions and data throughput. 
+                                    This approach minimizes manual configuration, streamlining the setup process, while ensuring reliable and efficient data exchange across interconnected systems within a local network.
+                                </h2>
+                            </div>
+                        </div>
+
+
+                        <div class="card fadeindown_anim" onclick="details_hobby(this)">
+                            <img  src="static\assets\code.png" alt="sample" />
+                            <div class="overlay-text" style="font-weight: 600;">pyXlR8</div>
+                            <div class="details">
+                                <buttom id="exit_btn" onclick="rem_proj_details(this)">🗙</buttom>
+                                <h1 style="font-size: 3rem; margin-top: 20px;margin-bottom: 20px;"> pyXlR8 </h1>
+                                <h2 style="margin-bottom: 40px;">
+                                    PyXLR8 is a Python library that allows users to seamlessly write, compile, and execute C code directly within Python scripts. 
+                                    It provides an easy-to-use interface for compiling C code snippets, making it ideal for projects that require the integration of C code functionality 
+                                    into Python applications making the program faster. 
+                                    Python function with c-code snippets in function doc strings allows the function to be compiled directly and the function is changed in 
+                                    global namespace to foregin function that calls a dynamically linked shared object. 
+                                    The C compiler flags and optimization levels can be controlled.
+                                </h2>
+                            </div>
+                        </div>
+
+                        <div class="card fadeindown_anim" onclick="details_hobby(this)">
+                            <img  src="static\assets\brenner.png" alt="sample" />
+                            <div class="overlay-text" style="font-weight: 600;">Optimized Tersoff-Brenner Potential Implementation</div>
+                            <div class="details">
+                                <buttom id="exit_btn" onclick="rem_proj_details(this)">🗙</buttom>
+                                <h1 style="font-size: 3rem; margin-top: 20px;margin-bottom: 20px;"> Optimized Tersoff-Brenner Potential Implementation </h1>
+                                <h2 style="margin-bottom: 40px;">
+                                    
+                                </h2>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="section contact">
+                <h1 class="Title fadeinright_anim" >CONTACTS</h1>
+                <div class="contact-table fadeinleft_anim">
+                    <div id="elem">
+                        <p>Phone: +91 8089410513</p>
+                    </div>
+
+                    <div id="elem">
+                        <p>Email: abhinavyukths21@iisertvm.ac.in</p>
+                    </div>
+
+                    <div id="elem">
+                        <p>Email: abhinavyukths@gmail.com</p>
+                    </div>
+
+                    <div id="elem">
+                        <p>Github:  www.linkedin.com/in/abhinavyukth-suresh </p>
+                        </div>
+
+                    <div id="elem">
+                        <p>LinkedIn:  www.github.com/Abhinavyukth-Suresh   </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div style="width:100%; height:200px">
+            </div>
+            
+        </div>
+    </div>
+
+  <script>
+    const toggleSidebarBtn = document.getElementById('toggleSidebarBtn');
+    const sidebar = document.getElementById('sidebar');
+
+    toggleSidebarBtn.addEventListener('click', () => {
+      sidebar.classList.toggle('open'); // Toggle 'open' class to show/hide the sidebar
+    });
+
+  </script>
 
 </body>
 </html>

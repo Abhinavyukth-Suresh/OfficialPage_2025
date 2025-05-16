@@ -1,0 +1,35 @@
+#intro{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    }
+
+.hsplit1{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    }
+
+#intro_text_box h1{
+    color: white;
+    font-family: 'Lato', i;
+    padding-left: 40px;
+    }
+
+#refimg{
+    opacity: 0.3;
+    }
+
+#intro2{
+    font-size: x-large;
+    }
+
+@media (min-width:1000px){
+    #intro2{
+        font-size: xx-large;
+        max-width: 52%;
+        }
+    }

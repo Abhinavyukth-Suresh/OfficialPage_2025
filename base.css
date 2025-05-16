@@ -1,0 +1,105 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+body {
+    height: 100%;
+    color: white;
+    background-color: black;
+    min-height: 100%;
+    }
+
+html{
+    min-height: 100%;
+}
+
+.topbar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    z-index: 10;              /*on top of other content */
+    font-family: 'Raleway';
+    }
+
+.topbar button {
+    background-color: #121212;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: x-large;
+    font-family: 'Raleway';
+    }
+
+.topbar button:hover {
+    background-color: rgb(75, 42, 208);
+    }
+
+    /*Positioned from Right */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px;            /*starts off-screen */
+    width: 250px;
+    height: 100%;
+    background-color: #121212;
+    color: white;
+    padding: 20px;
+    font-family: 'Raleway';
+    transition: right 0.3s ease-in-out;
+    z-index: 9;
+    opacity: 0.8;
+    }
+
+.sidebar.open {
+    right: 0;                 /* Move into view when 'open' is added */
+    }
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin: 15px 0;
+    font-size: x-large;
+    padding: 10px;
+    }
+
+.sidebar a:hover {
+    background-color: rgb(75, 42, 208);
+    }
+
+.main-content {
+    z-index: 5;
+    padding: 20px;
+    }
+
+.content {
+    height:fit-content;  /* debug */
+    }
+
+.section{
+            overflow-x: hidden;
+            overflow-y:initial;
+            width: 100%;
+        }
+
+.Title{
+    font-family: 'Raleway';
+    margin-top: 80px;
+    font-size: 3rem;
+    margin-left: 17%;
+    margin-bottom: 80px;
+    }
+
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}

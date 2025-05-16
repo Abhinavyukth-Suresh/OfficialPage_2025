@@ -1,0 +1,85 @@
+/*ANIMATIONS CSS*/
+.fadeinright_anim {
+    opacity: 0;
+    transform: translateX(250px);
+}
+
+.fadeinright_visible {
+    animation: fadeInRight 2s ease-out forwards;
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(250px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+.fadeinleft_anim {
+    opacity: 0;
+    transform: translateX(-150px);
+}
+
+.fadeinleft_visible {
+    animation: fadeInLeft 2s ease-out forwards;
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-150px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+.fadeintop_anim {
+    opacity: 0;
+    transform: translateY(-150px);
+}
+
+.fadeintop_visible {
+    animation: fadeInTop 2s ease-out forwards;
+}
+
+@keyframes fadeInTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-150px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+.fadeindown_anim {
+    opacity: 0;
+    transform: translateY(150px);
+}
+
+.fadeindown_visible {
+    animation: fadeInDown 2s ease-out forwards;
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(150px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
